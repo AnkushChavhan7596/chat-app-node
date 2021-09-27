@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyChat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="design"></div>
+   
+    
+    <!-- --------------------- Main Conatiner----------------------- --->
+     <div class="hero">
+         <div class="users">
+
+             <div class="users__header">
+                    <img id="logo" src="./images/chat.png" alt="">
+                    <h2>ChatBus</h2>
+             </div>
+
+            <div class="users-heading_cont">
+                <img id="users-logo" src="./images/team.png" >
+                <h2 class="users-section-heading">Users</h2>
+            </div>
+            
+
+             <div class="users__body">
+               <!-------- dynamic user------ -->
+            </div>
+         </div>
+
+
+
+         <!-- --------------Chat ------------------ -->
+
+         <div class="chat">
+            <div class="chat__header">
+                <div class="chat__user">
+                   <h2>Chats</h2>
+                </div>
+                <div class="chat__users--header-icons-div">
+                    <i id="hamburger" class="fas fa-bars"></i>
+                </div>
+            </div>
+
+            
+            <div class="chat__body">
+             <!-- ----- dynamic messages ----- -->
+            </div>
+   
+   
+            <div class="chat__footer">
+                  <div class="chat__footer--search-div">
+                      <input type="text" id="chat-send-box" placeholder="Send message">
+                      <!-- <i class="fas fa-paper-plane" id="send-btn"></i>
+                     -->
+                     <button id="mesg-send-btn">Send</button>
+                  </div>
+            </div>
+         </div>
+
+     </div>
+     <div class="overlay"></div>
+
+    <!-- --------------------End Main Conatiner---------------------- -->
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="./js/client.js"></script>
+</body>
+</html>
