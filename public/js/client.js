@@ -5,8 +5,6 @@ const hambergur_btn = document.querySelector("#hamburger");
 const active_users_container = document.querySelector(".users");
 const overlay = document.querySelector(".overlay");
 
-
-console.log("Hello world")
 hambergur_btn.addEventListener("click",()=>{
     active_users_container.classList.toggle("users-hamb");
     overlay.classList.toggle("body-overlay");
@@ -72,13 +70,35 @@ mesgSendBtn.addEventListener("click",()=>{
         user : username,
         msg : inputMsgSendBox.value
     };
-    if(inputMsgSendBox!="")
+    if(inputMsgSendBox.value !="")
     {
         appendMessage(data,'outgoing');
         socket.emit("message",data);
         inputMsgSendBox.value="";
     }
+    else{
+        alert("Enter some text");
+    }
 });
+
+window.addEventListener("keyup",(e)=>{
+    if(e.key === "Enter")
+    {
+        let data={
+            user : username,
+            msg : inputMsgSendBox.value
+        };
+        if(inputMsgSendBox.value !="")
+        {
+            appendMessage(data,'outgoing');
+            socket.emit("message",data);
+            inputMsgSendBox.value="";
+        }
+        else{
+            alert("Enter some text");
+        }
+   }
+})
 
 socket.on("message",(data)=>{
     appendMessage(data, "incoming")

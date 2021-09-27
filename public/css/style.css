@@ -458,6 +458,19 @@ body{
         padding: 10px 10px;
         padding-bottom: 10px;
     }
+    /* .msg p{
+        display: inline-block;
+        background-color: red;
+    }
+    .mesg-sent .msg{
+        background-color: white;
+    } */
+
+    /* .inner-msg-block{
+        text-align: right;
+        background-color: rgb(0, 214, 186);
+        display: inline-block;
+    } */
 
 }
 
@@ -476,20 +489,31 @@ body{
         position: relative;
     }
     .msg{
-        width:400px;
+        width:300px;
     }
 }
 
 @media screen and (max-width: 500px){
     .msg{
-        width:330px;
+        width:250px;
+    }
+    .join-left{
+        text-align: center;
+        margin: 10px 0;
+    }
+    .join-left p{
+        display: inline-block;
+        font-size: 15px;
+        background-color: rgba(188, 137, 204, 0.452);
+        border-radius: 20px;
+        padding: 5px 20px;
     }
 }
 
 
 @media screen and (max-width: 400px){
     .msg{
-        width:270px;
+        width:240px;
     }
     .users
     {
